@@ -45,7 +45,6 @@ if(($_SERVER["REQUEST_METHOD"] == "POST")){
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="theme-color" content="#75a2dc" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#75a2dc" media="(prefers-color-scheme: dark)">
-  <link rel="icon" type="image/png" href="https://www.renaudgajda.com/favicon.ico">
   <link rel="stylesheet" href="contents/css/style.css">
   <script src="https://cdn.tailwindcss.com"></script>
 
