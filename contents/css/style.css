@@ -1,0 +1,59 @@
+body{
+  background: #75a2dc;
+  background-repeat: repeat-y;
+  background-image: url("https://raw.githubusercontent.com/renaudgweb/CatPrinter/main/catprinter.jpg");
+}
+nav select{
+  margin: 5px;
+  width: 250px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 20px;
+  font-weight: 500;
+  box-shadow: 4px 4px #ccc;
+}
+nav, main{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  min-height: 15vh;
+}
+button{
+  background: white !important;
+  border-radius: 5px !important;
+  padding: 10px 25px !important;
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  margin: 10px !important;
+  cursor: pointer;
+  box-shadow: 4px 4px #ccc;
+}
+section{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+textarea{
+  width: 350px;
+  height: 130px;
+  border-radius: 5px;
+  box-shadow: 4px 4px #ccc;
+  margin: 10px !important;
+}
+.img{
+  max-width: 560px;
+}
+.drag-area{
+  background: #75a2dc;
+  border: 2px dashed #fff;
+  height: 80%;
+  width: 100%;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px;
+}
