@@ -1,17 +1,32 @@
+@font-face {
+  font-family: "Sligoil-Micro";
+  src: url("../fonts/Sligoil-Micro.woff") format("woff"),
+        url("../fonts/Sligoil-Micro.woff2") format("woff2"),
+        url("../fonts/Sligoil-Micro.otf") format("opentype"),
+        url("../fonts/Sligoil-Micro.ttf") format("truetype");
+}
 body{
-  background: #75a2dc;
-  background-repeat: repeat-y;
-  background-image: url("https://raw.githubusercontent.com/renaudgweb/CatPrinter/main/catprinter.jpg");
+  background: #ddd;
+  font-family: "Sligoil-Micro", monospace;
+}
+h1{
+  text-align: center;
+  font-size: 48px;
 }
 nav select{
   margin: 5px;
   width: 250px;
   height: 50px;
   border-radius: 5px;
-  background-color: white;
+  background-color: #f0f;
   font-size: 20px;
   font-weight: 500;
-  box-shadow: 4px 4px #ccc;
+  box-shadow: 4px 4px #000;
+  transition: 0.5s ease;
+}
+nav select:hover{
+  box-shadow: 8px 8px #000;
+  background-color: #ff0 !important;
 }
 nav, main{
   display: flex;
@@ -21,14 +36,19 @@ nav, main{
   min-height: 15vh;
 }
 button{
-  background: white !important;
+  background: #f0f !important;
   border-radius: 5px !important;
   padding: 10px 25px !important;
   font-size: 20px !important;
   font-weight: 500 !important;
   margin: 10px !important;
   cursor: pointer;
-  box-shadow: 4px 4px #ccc;
+  box-shadow: 4px 4px #000;
+  transition: 0.5s ease;
+}
+button:hover{
+  box-shadow: 8px 8px #000;
+  background-color: #ff0 !important;
 }
 section{
   display: flex;
@@ -39,15 +59,17 @@ textarea{
   width: 350px;
   height: 130px;
   border-radius: 5px;
-  box-shadow: 4px 4px #ccc;
+  box-shadow: 4px 4px #000;
   margin: 10px !important;
+  background-color: #ccc;
+  border: 2px dashed #f0f;
 }
 .img{
   max-width: 560px;
 }
 .drag-area{
-  background: #75a2dc;
-  border: 2px dashed #fff;
+  background: #ccc;
+  border: 2px dashed #f0f;
   height: 80%;
   width: 100%;
   border-radius: 5px;
@@ -56,4 +78,5 @@ textarea{
   justify-content: center;
   flex-direction: column;
   margin: 10px;
+  box-shadow: 4px 4px #000;
 }
