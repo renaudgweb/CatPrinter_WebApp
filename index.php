@@ -43,16 +43,19 @@ if(($_SERVER["REQUEST_METHOD"] == "POST")){
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="theme-color" content="#75a2dc" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#75a2dc" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f0f" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#f0f" media="(prefers-color-scheme: dark)">
+  <link rel=icon href=contents/favicon/favicon.png sizes="16x16" type="image/png">
+  <link rel=icon href=contents/favicon/favicon.ico sizes="32x32 48x48" type="image/vnd.microsoft.icon">
+  <link rel=icon href=contents/favicon/android-chrome-512x512.png sizes="192x192 512x512">
+  <link rel=icon href=contents/favicon/apple-touch-icon.png sizes="180x180" type="image/png">
   <link rel="stylesheet" href="contents/css/style.css">
-  <script src="https://cdn.tailwindcss.com"></script>
 
 <title>Cat Printer</title>
 
 </head>
-<body class="font-mono">
-  <h1 class="text-3xl text-center underline">Cat Printer Web App</h1>
+<body>
+  <h1>Cat Printer Web App</h1>
   <nav>
     <form action="" method="post">
       <select name="font_family">
@@ -60,6 +63,29 @@ if(($_SERVER["REQUEST_METHOD"] == "POST")){
         <option value="MajorMonoDisplay-Regular.ttf">Major Mono Display</option>
         <option value="VG5000-Regular_web.ttf">VG5000</option>
         <option value="ocr_b.ttf">OCR-B</option>
+        <option value="Anthony.ttf">Anthony</option>
+        <option value="BilboINC.ttf">BilboINC</option>
+        <option value="CirrusCumulus.ttf">CirrusCumulus</option>
+        <option value="Commune-Nuit_Debout_web.ttf">Commune Nuit Debout</option>
+        <option value="FacadeGX.ttf">Facade</option>
+        <option value="Format_1452.ttf">Format1452</option>
+        <option value="Gulax-Regular.ttf">Gulax</option>
+        <option value="vtf_hngl-webfont.ttf">Hangul</option>
+        <option value="Mister-Pixel-Regular.ttf">Mister Pixel</option>
+        <option value="le-murmure.ttf">le murmure</option>
+        <option value="Ouroboros-Regular.ttf">Ouroboros</option>
+        <option value="outward-block.ttf">outward (block)</option>
+        <option value="outward-borders.ttf">outward (borders)</option>
+        <option value="PicNic-Regular.ttf">PicNic</option>
+        <option value="Pilowlava-Regular.ttf">Pilowlava</option>
+        <option value="savate-regular-webfont.ttf">savate</option>
+        <option value="Sligoil-Micro.ttf">Sligoil</option>
+        <option value="Solide_Mirage-Mono_web.ttf">Solide Mirage</option>
+        <option value="Steps-Mono.ttf">Steps</option>
+        <option value="terminal-grotesque.ttf">terminal grotesque</option>
+        <option value="Trickster-Reg.ttf">Trickster</option>
+        <option value="Typefesse_Claire-Obscure.ttf">Typefesse (Claire-Obscure)</option>
+        <option value="Typefesse_Pleine.ttf">Typefesse (Pleine)</option>
       </select>
 
       <select name="font_size">
