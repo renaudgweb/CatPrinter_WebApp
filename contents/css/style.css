@@ -6,7 +6,7 @@
         url("../fonts/Terminal/terminal-grotesque-webfont.svg") format("svg"),
         url("../fonts/Terminal/terminal-grotesque-webfont.ttf") format("truetype");
 }
-@@font-face {
+@font-face {
   font-family: "Sligoil";
   src: url("../fonts/Sligoil/Sligoil-Micro.woff") format("woff"),
         url("../fonts/Sligoil/Sligoil-Micro.woff2") format("woff2"),
