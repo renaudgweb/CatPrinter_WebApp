@@ -10,9 +10,9 @@
 
 if(($_SERVER["REQUEST_METHOD"] == "POST")){
   if (isset($_POST['text']) && isset($_POST['font_family']) && isset($_POST['font_size'])){
-    $font_family = $_POST['font_family'];
-    $font_size = $_POST['font_size'];
-    $user_text = $_POST['text'];
+    $font_family = htmlspecialchars($_POST['font_family']);
+    $font_size = htmlspecialchars($_POST['font_size']);
+    $user_text = htmlspecialchars($_POST['text']);
     shell_exec("curl --location -X POST --form 'font=".$font_family."' --form 'size=".$font_size."' --form 'text=".$user_text."' --form 'feed=\"100\"' 'localhost:5000'");
   } elseif (isset($_FILES['image'])){
       $errors = array();
@@ -50,18 +50,24 @@ if(($_SERVER["REQUEST_METHOD"] == "POST")){
   <link rel=icon href=contents/favicon/android-chrome-512x512.png sizes="192x192 512x512">
   <link rel=icon href=contents/favicon/apple-touch-icon.png sizes="180x180" type="image/png">
   <link rel="stylesheet" href="contents/css/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 
-<title>Cat Printer</title>
+<title>Web Cat Printer</title>
 
 </head>
 <body>
-  <h1>Cat Printer Web App</h1>
+  <audio controls autoplay loop>
+    <source src="contents/sounds/Kirk_Osamayo-Shiba.mp3">
+  </audio>
+
+  <h1>Web Cat Printer (◉_◉)</h1>
+
   <nav>
     <form action="" method="post">
       <select name="font_family">
-        <option value="Lucida_Console_Regular.ttf" selected="yes">Lucida Console</option>
+        <option value="Lucida_Console_Regular.ttf">Lucida Console</option>
         <option value="MajorMonoDisplay-Regular.ttf">Major Mono Display</option>
-        <option value="VG5000-Regular_web.ttf">VG5000</option>
+        <option value="VG5000-Regular_web.ttf" selected="yes">VG5000</option>
         <option value="ocr_b.ttf">OCR-B</option>
         <option value="Anthony.ttf">Anthony</option>
         <option value="BilboINC.ttf">BilboINC</option>
@@ -101,12 +107,12 @@ if(($_SERVER["REQUEST_METHOD"] == "POST")){
         <option value="15">15 pt</option>
         <option value="16">16 pt</option>
         <option value="18">18 pt</option>
-        <option value="20" selected="yes">20 pt</option>
+        <option value="20">20 pt</option>
         <option value="21">21 pt</option>
         <option value="22">22 pt</option>
         <option value="24">24 pt</option>
         <option value="26">26 pt</option>
-        <option value="28">28 pt</option>
+        <option value="28" selected="yes">28 pt</option>
         <option value="30">30 pt</option>
         <option value="32">32 pt</option>
         <option value="34">34 pt</option>
@@ -129,8 +135,8 @@ if(($_SERVER["REQUEST_METHOD"] == "POST")){
   <main>
 
     <section>
-        <textarea id="text" name="text" placeholder=" Write here..."></textarea>
-        <button type="submit">send text</button>
+      <textarea id="text" name="text" placeholder=" Write here..."></textarea>
+      <button type="submit">send text</button>
     </section>
     </form>
 
