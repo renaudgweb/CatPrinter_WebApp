@@ -21,6 +21,22 @@ if (window.FileList && window.File && window.FileReader) {
   });
 }
 
+
+$(document).ready(function() {
+  $('#font-family').change(function() {
+    var font_family = $(this).val();
+    $('#text').css('font-family', '"'+font_family+'"');
+  });
+});
+
+$(document).ready(function() {
+  $('#font-size').change(function() {
+    var font_size = $(this).val();
+    $('#text').css('fontSize', font_size+"px");
+  });
+});
+
+
 $(document).ready(function() {
   $('#fonts').submit(function() {
     $('#status').html("<b>Printing text...</b>");
