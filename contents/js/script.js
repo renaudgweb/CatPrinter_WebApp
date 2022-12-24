@@ -20,3 +20,21 @@ if (window.FileList && window.File && window.FileReader) {
     reader.readAsDataURL(file);
   });
 }
+
+$(document).ready(function() {
+  $('#fonts').submit(function() {
+    $('#status').html("<b>Printing text...</b>");
+    $.ajax({
+        type: 'POST',
+        url: 'index.php',
+        data: $(this).serialize()
+      })
+      .done(function() {
+        $('#status').html("<b>Printed !</b>");
+      })
+      .fail(function() {
+        alert("Posting failed.");
+      });
+    return false;
+  });
+});
