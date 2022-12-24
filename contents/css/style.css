@@ -108,3 +108,22 @@ textarea {
 .drag-area input {
   font-family: "Sligoil", monospace;
 }
+.status {
+  border: 4px #ff0 dashed;
+  border-radius: 5px;
+  margin: 10px 40px;
+  padding: 0px 40px;
+  box-shadow: 4px 4px #000;
+  background-color: #ddd;
+  transition: 0.5s ease;
+}
+.status p {
+  text-decoration: underline;
+  text-decoration-color: #f0f;
+  font-family: "Sligoil", monospace;
+  font-size: 20pt;
+  word-wrap: break-word;
+}
+.status:hover {
+  box-shadow: 8px 8px #000;
+}
