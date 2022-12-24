@@ -63,7 +63,7 @@ if(($_SERVER["REQUEST_METHOD"] == "POST")){
   <h1>Web Cat Printer (◉_◉)</h1>
 
   <nav>
-    <form action="" method="post">
+    <form id="fonts" action="" method="post">
       <select name="font_family">
         <option value="Lucida_Console_Regular.ttf">Lucida Console</option>
         <option value="MajorMonoDisplay-Regular.ttf">Major Mono Display</option>
@@ -146,6 +146,8 @@ if(($_SERVER["REQUEST_METHOD"] == "POST")){
           <input type="file" name="image" id="file-selector" accept=".jpg, .jpeg, .png">
           <button type="submit" value="send">send image</button>
         </form>
+      </div>
+      <div class="status">
         <p id="status"></p>
       </div>
       <div class="img">
