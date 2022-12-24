@@ -82,9 +82,9 @@
 }
 @font-face {
   font-family: "le-murmure.ttf";
-  src: url("../fonts/murmure/le-murmure-Regular.woff") format("woff"),
-        url("../fonts/murmure/le-murmure-Regular.woff2") format("woff2"),
-        url("../fonts/murmure/le-murmure-Regular.eot") format("embedded-opentype"),
+  src: url("../fonts/murmure/LeMurmure-Regular.woff") format("woff"),
+        url("../fonts/murmure/LeMurmure-Regular.woff2") format("woff2"),
+        url("../fonts/murmure/LeMurmure-Regular.eot") format("embedded-opentype"),
         url("../fonts/murmure/le-murmure.otf") format("opentype"),
         url("../fonts/murmure/le-murmure.ttf") format("truetype");
 }
