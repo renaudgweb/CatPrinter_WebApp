@@ -64,7 +64,7 @@ if(($_SERVER["REQUEST_METHOD"] == "POST")){
 
   <nav>
     <form id="fonts" action="" method="post">
-      <select id="font_family" name="font_family">
+      <select id="font-family" name="font_family">
         <option value="Lucida_Console_Regular.ttf">Lucida Console</option>
         <option value="MajorMonoDisplay-Regular.ttf">Major Mono Display</option>
         <option value="VG5000-Regular_web.ttf" selected="yes">VG5000</option>
@@ -94,7 +94,7 @@ if(($_SERVER["REQUEST_METHOD"] == "POST")){
         <option value="Typefesse_Pleine.ttf">Typefesse (Pleine)</option>
       </select>
 
-      <select name="font_size">
+      <select id="font-size" name="font_size">
         <option value="6">6 pt</option>
         <option value="7">7 pt</option>
         <option value="8">8 pt</option>
