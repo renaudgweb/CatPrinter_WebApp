@@ -1,19 +1,41 @@
 @font-face {
-  font-family: "Sligoil-Micro";
-  src: url("../fonts/Sligoil-Micro.woff") format("woff"),
-        url("../fonts/Sligoil-Micro.woff2") format("woff2"),
-        url("../fonts/Sligoil-Micro.otf") format("opentype"),
-        url("../fonts/Sligoil-Micro.ttf") format("truetype");
+  font-family: "Terminal-Grotesque";
+  src: url("../fonts/Terminal/terminal-grotesque-webfont.woff") format("woff"),
+        url("../fonts/Terminal/terminal-grotesque-webfont.woff2") format("woff2"),
+        url("../fonts/Terminal/terminal-grotesque-webfont.eot") format("embedded-opentype"),
+        url("../fonts/Terminal/terminal-grotesque-webfont.svg") format("svg"),
+        url("../fonts/Terminal/terminal-grotesque-webfont.ttf") format("truetype");
+}
+@@font-face {
+  font-family: "Sligoil";
+  src: url("../fonts/Sligoil/Sligoil-Micro.woff") format("woff"),
+        url("../fonts/Sligoil/Sligoil-Micro.woff2") format("woff2"),
+        url("../fonts/Sligoil/Sligoil-Micro.otf") format("opentype"),
+        url("../fonts/Sligoil/Sligoil-Micro.ttf") format("truetype");
 }
 body{
-  background: #ddd;
-  font-family: "Sligoil-Micro", monospace;
+  background: #ccc;
+  font-family: "Terminal-Grotesque", monospace;
+  margin: 10px;
+}
+audio{
+  width: 50px;
+  border-radius: 5px;
+  background-color: #f0f;
+  box-shadow: 4px 4px #000;
+  border: 2px #ff0 dashed;
+  transition: 0.5s ease;
+}
+audio:hover{
+  box-shadow: 8px 8px #000;
 }
 h1{
   text-align: center;
-  font-size: 48px;
+  font-size: 28pt;
+  margin: 10px;
 }
 nav select{
+  font-family: "Sligoil", monospace;
   margin: 5px;
   width: 250px;
   height: 50px;
@@ -36,6 +58,7 @@ nav, main{
   min-height: 15vh;
 }
 button{
+  font-family: "Sligoil", monospace !important;
   background: #f0f !important;
   border-radius: 5px !important;
   padding: 10px 25px !important;
@@ -56,19 +79,21 @@ section{
   flex-direction: column;
 }
 textarea{
-  width: 350px;
-  height: 130px;
+  font-family: "Sligoil", monospace;
+  min-width: 60vw;
+  min-height: 130px;
   border-radius: 5px;
   box-shadow: 4px 4px #000;
   margin: 10px !important;
-  background-color: #ccc;
+  background-color: #ddd;
   border: 2px dashed #f0f;
 }
 .img{
   max-width: 560px;
 }
 .drag-area{
-  background: #ccc;
+  font-family: "Sligoil", monospace;
+  background: #ddd;
   border: 2px dashed #f0f;
   height: 80%;
   width: 100%;
@@ -79,4 +104,7 @@ textarea{
   flex-direction: column;
   margin: 10px;
   box-shadow: 4px 4px #000;
+}
+.drag-area input{
+  font-family: "Sligoil", monospace;
 }
