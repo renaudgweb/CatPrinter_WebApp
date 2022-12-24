@@ -9,12 +9,12 @@
 // curl --location --request POST --form 'feed="100"' 'localhost:5000'
 
 if(($_SERVER["REQUEST_METHOD"] == "POST")){
-  if (isset($_POST['text']) && isset($_POST['font_family']) && isset($_POST['font_size'])){
+  if (empty(isset($_POST['text'])) && isset($_POST['font_family']) && isset($_POST['font_size'])){
     $font_family = htmlspecialchars($_POST['font_family']);
     $font_size = htmlspecialchars($_POST['font_size']);
     $user_text = htmlspecialchars($_POST['text']);
     shell_exec("curl --location -X POST --form 'font=".$font_family."' --form 'size=".$font_size."' --form 'text=".$user_text."' --form 'feed=\"100\"' 'localhost:5000'");
-  } elseif (isset($_FILES['image'])){
+  } elseif (empty(isset($_FILES['image']))){
       $errors = array();
       $file_name = $_FILES['image']['name'];
       $file_size = $_FILES['image']['size'];
@@ -33,7 +33,7 @@ if(($_SERVER["REQUEST_METHOD"] == "POST")){
   } elseif (isset($_POST['feed'])){
       shell_exec("curl --location --request POST --form 'feed=\"100\"' 'localhost:5000'");
   } else {
-      echo "<p class='text-2xl text-center' style='background-color:yellowgreen;'>Error</p>";
+      echo "<p class='text-2xl text-center' style='background-color:yellow;text-align:center;font-size:20px'>Error: the text-area or image is empty :(</p>";
   }
 }
 ?>
@@ -64,7 +64,7 @@ if(($_SERVER["REQUEST_METHOD"] == "POST")){
 
   <nav>
     <form id="fonts" action="" method="post">
-      <select name="font_family">
+      <select id="font_family" name="font_family">
         <option value="Lucida_Console_Regular.ttf">Lucida Console</option>
         <option value="MajorMonoDisplay-Regular.ttf">Major Mono Display</option>
         <option value="VG5000-Regular_web.ttf" selected="yes">VG5000</option>
