@@ -1,3 +1,9 @@
+/*---------------------------------------------------*/
+/*                                                   */
+/*            !!      FONT FACE      !!              */
+/*                                                   */
+/*---------------------------------------------------*/
+
 @font-face {
   font-family: "Terminal-Grotesque";
   src: url("../fonts/Terminal/terminal-grotesque-webfont.woff") format("woff"),
@@ -21,6 +27,37 @@
         url("../fonts/anthony/Anthony.otf") format("opentype"),
         url("../fonts/anthony/Anthony.ttf") format("truetype");
 }
+@font-face {
+  font-family: "BilboINC.ttf";
+  src: url("../fonts/BilboINC/BilboINC-Regular_web.woff") format("woff"),
+        url("../fonts/BilboINC/BilboINC-Regular_web.woff2") format("woff2"),
+        url("../fonts/BilboINC/BilboINC-Regular_web.eot") format("embedded-opentype"),
+        url("../fonts/BilboINC/BilboINC-Regular_web.otf") format("opentype"),
+        url("../fonts/BilboINC/BilboINC-Regular_web.svg") format("svg"),
+        url("../fonts/BilboINC/BilboINC-Regular_web.ttf") format("truetype");
+}
+@font-face {
+  font-family: "CirrusCumulus.ttf";
+  src: url("../fonts/cirruscumulus/CirrusCumulus.woff") format("woff"),
+        url("../fonts/cirruscumulus/CirrusCumulus.otf") format("opentype"),
+        url("../fonts/cirruscumulus/CirrusCumulus.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Commune-Nuit_Debout_web.ttf";
+  src: url("../fonts/Commune-Nuit-Debout/Commune-Nuit_Debout_web.woff") format("woff"),
+        url("../fonts/Commune-Nuit-Debout/Commune-Nuit_Debout_web.woff2") format("woff2"),
+        url("../fonts/Commune-Nuit-Debout/Commune-Nuit_Debout_web.eot") format("embedded-opentype"),
+        url("../fonts/Commune-Nuit-Debout/Commune-Nuit_Debout_web.otf") format("opentype"),
+        url("../fonts/Commune-Nuit-Debout/Commune-Nuit_Debout_web.svg") format("svg"),
+        url("../fonts/Commune-Nuit-Debout/Commune-Nuit_Debout_web.ttf") format("truetype");
+}
+
+/*---------------------------------------------------*/
+/*                                                   */
+/*            !!      BEGIN STYLE      !!            */
+/*                                                   */
+/*---------------------------------------------------*/
+
 body {
   background: #ccc;
   font-family: "Terminal-Grotesque", monospace;
