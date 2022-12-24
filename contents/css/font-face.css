@@ -1,17 +1,33 @@
 @font-face {
-  font-family: "Terminal-Grotesque";
-  src: url("../fonts/Terminal/terminal-grotesque-webfont.woff") format("woff"),
-        url("../fonts/Terminal/terminal-grotesque-webfont.woff2") format("woff2"),
-        url("../fonts/Terminal/terminal-grotesque-webfont.eot") format("embedded-opentype"),
-        url("../fonts/Terminal/terminal-grotesque-webfont.svg") format("svg"),
-        url("../fonts/Terminal/terminal-grotesque-webfont.ttf") format("truetype");
+  font-family: "Lucida_Console_Regular.ttf";
+  src: url("../fonts/lucida_console/Lucida-Console.woff") format("woff"),
+        url("../fonts/lucida_console/Lucida-Console.svg") format("svg"),
+        url("../fonts/lucida_console/Lucida-Console.eot") format("embedded-opentype"),
+        url("../fonts/lucida_console/Lucida-Console.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Sligoil";
-  src: url("../fonts/Sligoil/Sligoil-Micro.woff") format("woff"),
-        url("../fonts/Sligoil/Sligoil-Micro.woff2") format("woff2"),
-        url("../fonts/Sligoil/Sligoil-Micro.otf") format("opentype"),
-        url("../fonts/Sligoil/Sligoil-Micro.ttf") format("truetype");
+  font-family: "MajorMonoDisplay-Regular.ttf";
+  src: url("../fonts/major-mono/MajorMonoDisplay-Regular.woff") format("woff"),
+        url("../fonts/major-mono/MajorMonoDisplay-Regular.woff2") format("woff2"),
+        url("../fonts/major-mono/MajorMonoDisplay-Regular.eot") format("embedded-opentype"),
+        url("../fonts/major-mono/MajorMonoDisplay-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "VG5000-Regular_web.ttf";
+  src: url("../fonts/vg5000/VG5000-Regular_web.woff") format("woff"),
+        url("../fonts/vg5000/VG5000-Regular_web.woff2") format("woff2"),
+        url("../fonts/vg5000/VG5000-Regular_web.eot") format("embedded-opentype"),
+        url("../fonts/vg5000/VG5000-Regular.otf") format("opentype"),
+        url("../fonts/vg5000/VG5000-Regular_web.svg") format("svg"),
+        url("../fonts/vg5000/VG5000-Regular_web.ttf") format("truetype");
+}
+@font-face {
+  font-family: "ocr_b.ttf";
+  src: url("../fonts/ocr_b/ocr_b.woff") format("woff"),
+        url("../fonts/ocr_b/ocr_b.woff2") format("woff2"),
+        url("../fonts/ocr_b/ocr_b.eot") format("embedded-opentype"),
+        url("../fonts/ocr_b/ocr_b.svg") format("svg"),
+        url("../fonts/ocr_b/ocr_b.ttf") format("truetype");
 }
 @font-face {
   font-family: "Anthony.ttf";
@@ -113,4 +129,79 @@
         url("../fonts/outward/outward-borders-webfont.otf") format("opentype"),
         url("../fonts/outward/outward-borders-webfont.svg") format("svg"),
         url("../fonts/outward/outward-borders.ttf") format("truetype");
+}
+@font-face {
+  font-family: "PicNic-Regular.ttf";
+  src: url("../fonts/PicNic/PicNic-Regular.woff") format("woff"),
+        url("../fonts/PicNic/PicNic-Regular.woff2") format("woff2"),
+        url("../fonts/PicNic/PicNic-Regular.eot") format("embedded-opentype"),
+        url("../fonts/PicNic/PicNic-Regular.otf") format("opentype"),
+        url("../fonts/PicNic/PicNic-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Pilowlava-Regular.ttf";
+  src: url("../fonts/pilowlava/Pilowlava-Regular.woff") format("woff"),
+        url("../fonts/pilowlava/Pilowlava-Regular.woff2") format("woff2"),
+        url("../fonts/pilowlava/Pilowlava-Regular.eot") format("embedded-opentype"),
+        url("../fonts/pilowlava/Pilowlava-Regular.otf") format("opentype"),
+        url("../fonts/pilowlava/Pilowlava-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "savate-regular-webfont.ttf";
+  src: url("../fonts/Savate/savate-regular-webfont.woff") format("woff"),
+        url("../fonts/Savate/savate-regular-webfont.woff2") format("woff2"),
+        url("../fonts/Savate/savate-regular-webfont.eot") format("embedded-opentype"),
+        url("../fonts/Savate/savate-regular.otf") format("opentype"),
+        url("../fonts/Savate/savate-regular-webfont.svg") format("svg"),
+        url("../fonts/Savate/savate-regular-webfont.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Sligoil";
+  src: url("../fonts/Sligoil/Sligoil-Micro.woff") format("woff"),
+        url("../fonts/Sligoil/Sligoil-Micro.woff2") format("woff2"),
+        url("../fonts/Sligoil/Sligoil-Micro.otf") format("opentype"),
+        url("../fonts/Sligoil/Sligoil-Micro.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Solide_Mirage-Mono_web.ttf";
+  src: url("../fonts/Solide-Mirage/Solide_Mirage-Mono_web.woff") format("woff"),
+        url("../fonts/Solide-Mirage/Solide_Mirage-Mono_web.woff2") format("woff2"),
+        url("../fonts/Solide-Mirage/Solide_Mirage-Mono_web.eot") format("embedded-opentype"),
+        url("../fonts/Solide-Mirage/SolideMirage-Mono.otf") format("opentype"),
+        url("../fonts/Solide-Mirage/Solide_Mirage-Mono_web.svg") format("svg"),
+        url("../fonts/Solide-Mirage/Solide_Mirage-Mono_web.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Steps-Mono.ttf";
+  src: url("../fonts/steps-mono/Steps-Mono.otf") format("opentype"),
+        url("../fonts/steps-mono/Steps-Mono.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Terminal-Grotesque";
+  src: url("../fonts/Terminal/terminal-grotesque-webfont.woff") format("woff"),
+        url("../fonts/Terminal/terminal-grotesque-webfont.woff2") format("woff2"),
+        url("../fonts/Terminal/terminal-grotesque-webfont.eot") format("embedded-opentype"),
+        url("../fonts/Terminal/terminal-grotesque-webfont.svg") format("svg"),
+        url("../fonts/Terminal/terminal-grotesque-webfont.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Trickster-Reg.ttf";
+  src: url("../fonts/Trickster/Trickster-Reg.otf") format("opentype"),
+        url("../fonts/Trickster/Trickster-Reg.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Typefesse_Claire-Obscure.ttf";
+  src: url("../fonts/typefesse/Typefesse_Claire-Obscure.woff") format("woff"),
+        url("../fonts/typefesse/Typefesse_Claire-Obscure.woff2") format("woff2"),
+        url("../fonts/typefesse/Typefesse_Claire-Obscure.eot") format("embedded-opentype"),
+        url("../fonts/typefesse/Typefesse_Claire-Obscure.otf") format("opentype"),
+        url("../fonts/typefesse/Typefesse_Claire-Obscure.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Typefesse_Pleine.ttf";
+  src: url("../fonts/typefesse/Typefesse_Pleine.woff") format("woff"),
+        url("../fonts/typefesse/Typefesse_Pleine.woff2") format("woff2"),
+        url("../fonts/typefesse/Typefesse_Pleine.eot") format("embedded-opentype"),
+        url("../fonts/typefesse/Typefesse_Pleine.otf") format("opentype"),
+        url("../fonts/typefesse/Typefesse_Pleine.ttf") format("truetype");
 }
