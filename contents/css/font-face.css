@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "Terminal-Grotesque";
+  src: url("../fonts/Terminal/terminal-grotesque-webfont.woff") format("woff"),
+        url("../fonts/Terminal/terminal-grotesque-webfont.woff2") format("woff2"),
+        url("../fonts/Terminal/terminal-grotesque-webfont.eot") format("embedded-opentype"),
+        url("../fonts/Terminal/terminal-grotesque-webfont.svg") format("svg"),
+        url("../fonts/Terminal/terminal-grotesque-webfont.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Sligoil";
+  src: url("../fonts/Sligoil/Sligoil-Micro.woff") format("woff"),
+        url("../fonts/Sligoil/Sligoil-Micro.woff2") format("woff2"),
+        url("../fonts/Sligoil/Sligoil-Micro.otf") format("opentype"),
+        url("../fonts/Sligoil/Sligoil-Micro.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Anthony.ttf";
+  src: url("../fonts/anthony/Anthony.woff") format("woff"),
+        url("../fonts/anthony/Anthony.woff2") format("woff2"),
+        url("../fonts/anthony/Anthony.eot") format("embedded-opentype"),
+        url("../fonts/anthony/Anthony.otf") format("opentype"),
+        url("../fonts/anthony/Anthony.ttf") format("truetype");
+}
+@font-face {
+  font-family: "BilboINC.ttf";
+  src: url("../fonts/BilboINC/BilboINC-Regular_web.woff") format("woff"),
+        url("../fonts/BilboINC/BilboINC-Regular_web.woff2") format("woff2"),
+        url("../fonts/BilboINC/BilboINC-Regular_web.eot") format("embedded-opentype"),
+        url("../fonts/BilboINC/BilboINC-Regular_web.otf") format("opentype"),
+        url("../fonts/BilboINC/BilboINC-Regular_web.svg") format("svg"),
+        url("../fonts/BilboINC/BilboINC-Regular_web.ttf") format("truetype");
+}
+@font-face {
+  font-family: "CirrusCumulus.ttf";
+  src: url("../fonts/cirruscumulus/CirrusCumulus.woff") format("woff"),
+        url("../fonts/cirruscumulus/CirrusCumulus.otf") format("opentype"),
+        url("../fonts/cirruscumulus/CirrusCumulus.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Commune-Nuit_Debout_web.ttf";
+  src: url("../fonts/Commune-Nuit-Debout/Commune-Nuit_Debout_web.woff") format("woff"),
+        url("../fonts/Commune-Nuit-Debout/Commune-Nuit_Debout_web.woff2") format("woff2"),
+        url("../fonts/Commune-Nuit-Debout/Commune-Nuit_Debout_web.eot") format("embedded-opentype"),
+        url("../fonts/Commune-Nuit-Debout/Commune-Nuit_Debout_web.otf") format("opentype"),
+        url("../fonts/Commune-Nuit-Debout/Commune-Nuit_Debout_web.svg") format("svg"),
+        url("../fonts/Commune-Nuit-Debout/Commune-Nuit_Debout_web.ttf") format("truetype");
+}
