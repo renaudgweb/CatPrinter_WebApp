@@ -13,12 +13,12 @@
         url("../fonts/Sligoil/Sligoil-Micro.otf") format("opentype"),
         url("../fonts/Sligoil/Sligoil-Micro.ttf") format("truetype");
 }
-body{
+body {
   background: #ccc;
   font-family: "Terminal-Grotesque", monospace;
   margin: 10px;
 }
-audio{
+audio {
   width: 50px;
   border-radius: 5px;
   background-color: #f0f;
@@ -26,15 +26,15 @@ audio{
   border: 2px #ff0 dashed;
   transition: 0.5s ease;
 }
-audio:hover{
+audio:hover {
   box-shadow: 8px 8px #000;
 }
-h1{
+h1 {
   text-align: center;
   font-size: 28pt;
   margin: 10px;
 }
-nav select{
+nav select {
   font-family: "Sligoil", monospace;
   margin: 5px;
   width: 250px;
@@ -46,18 +46,18 @@ nav select{
   box-shadow: 4px 4px #000;
   transition: 0.5s ease;
 }
-nav select:hover{
+nav select:hover {
   box-shadow: 8px 8px #000;
   background-color: #ff0 !important;
 }
-nav, main{
+nav, main {
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
   min-height: 15vh;
 }
-button{
+button {
   font-family: "Sligoil", monospace !important;
   background: #f0f !important;
   border-radius: 5px !important;
@@ -69,16 +69,16 @@ button{
   box-shadow: 4px 4px #000;
   transition: 0.5s ease;
 }
-button:hover{
+button:hover {
   box-shadow: 8px 8px #000;
   background-color: #ff0 !important;
 }
-section{
+section {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-textarea{
+textarea {
   font-family: "Sligoil", monospace;
   min-width: 60vw;
   min-height: 130px;
@@ -88,10 +88,10 @@ textarea{
   background-color: #ddd;
   border: 2px dashed #f0f;
 }
-.img{
+.img {
   max-width: 560px;
 }
-.drag-area{
+.drag-area {
   font-family: "Sligoil", monospace;
   background: #ddd;
   border: 2px dashed #f0f;
@@ -105,6 +105,6 @@ textarea{
   margin: 10px;
   box-shadow: 4px 4px #000;
 }
-.drag-area input{
+.drag-area input {
   font-family: "Sligoil", monospace;
 }
