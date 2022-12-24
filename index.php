@@ -49,6 +49,7 @@ if(($_SERVER["REQUEST_METHOD"] == "POST")){
   <link rel=icon href=contents/favicon/favicon.ico sizes="32x32 48x48" type="image/vnd.microsoft.icon">
   <link rel=icon href=contents/favicon/android-chrome-512x512.png sizes="192x192 512x512">
   <link rel=icon href=contents/favicon/apple-touch-icon.png sizes="180x180" type="image/png">
+  <link rel="stylesheet" href="contents/css/font-face.css">
   <link rel="stylesheet" href="contents/css/style.css">
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 
