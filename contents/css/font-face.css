@@ -45,3 +45,72 @@
         url("../fonts/Commune-Nuit-Debout/Commune-Nuit_Debout_web.svg") format("svg"),
         url("../fonts/Commune-Nuit-Debout/Commune-Nuit_Debout_web.ttf") format("truetype");
 }
+@font-face {
+  font-family: "FacadeGX.ttf";
+  src: url("../fonts/Facade/Facade-Sud.woff") format("woff"),
+        url("../fonts/Facade/Facade-Sud.otf") format("opentype"),
+        url("../fonts/Facade/Facade-Sud.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Format_1452.ttf";
+  src: url("../fonts/format-1452/Format_1452.woff") format("woff"),
+        url("../fonts/format-1452/Format_1452.woff2") format("woff2"),
+        url("../fonts/format-1452/Format_1452.eot") format("embedded-opentype"),
+        url("../fonts/format-1452/Format_1452.otf") format("opentype"),
+        url("../fonts/format-1452/Format_1452.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Gulax-Regular.ttf";
+  src: url("../fonts/Gulax/Gulax-Regular.woff") format("woff"),
+        url("../fonts/Gulax/Gulax-Regular.woff2") format("woff2"),
+        url("../fonts/Gulax/Gulax-Regular.eot") format("embedded-opentype"),
+        url("../fonts/Gulax/Gulax-Regular.otf") format("opentype"),
+        url("../fonts/Gulax/Gulax-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "vtf_hngl-webfont.ttf";
+  src: url("../fonts/Hangul/vtf_hngl-webfont.woff") format("woff"),
+        url("../fonts/Hangul/vtf_hngl-webfont.eot") format("embedded-opentype"),
+        url("../fonts/Hangul/hngl.otf") format("opentype"),
+        url("../fonts/Hangul/vtf_hngl-webfont.svg") format("svg"),
+        url("../fonts/Hangul/vtf_hngl-webfont.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Mister-Pixel-Regular.ttf";
+  src: url("../fonts/mr_pixel/Mister-Pixel-Regular.otf") format("opentype"),
+        url("../fonts/mr_pixel/Mister-Pixel-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "le-murmure.ttf";
+  src: url("../fonts/murmure/le-murmure-Regular.woff") format("woff"),
+        url("../fonts/murmure/le-murmure-Regular.woff2") format("woff2"),
+        url("../fonts/murmure/le-murmure-Regular.eot") format("embedded-opentype"),
+        url("../fonts/murmure/le-murmure.otf") format("opentype"),
+        url("../fonts/murmure/le-murmure.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Ouroboros-Regular.ttf";
+  src: url("../fonts/ouroboros/Ouroboros-Regular.woff") format("woff"),
+        url("../fonts/ouroboros/Ouroboros-Regular.woff2") format("woff2"),
+        url("../fonts/ouroboros/Ouroboros-Regular.eot") format("embedded-opentype"),
+        url("../fonts/ouroboros/Ouroboros-Regular.otf") format("opentype"),
+        url("../fonts/ouroboros/Ouroboros-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "outward-block.ttf";
+  src: url("../fonts/outward/outward-block-webfont.woff") format("woff"),
+        url("../fonts/outward/outward-block-webfont.woff2") format("woff2"),
+        url("../fonts/outward/outward-block-webfont.eot") format("embedded-opentype"),
+        url("../fonts/outward/outward-block-webfont.otf") format("opentype"),
+        url("../fonts/outward/outward-block-webfont.svg") format("svg"),
+        url("../fonts/outward/outward-block.ttf") format("truetype");
+}
+@font-face {
+  font-family: "outward-borders.ttf";
+  src: url("../fonts/outward/outward-borders-webfont.woff") format("woff"),
+        url("../fonts/outward/outward-borders-webfont.woff2") format("woff2"),
+        url("../fonts/outward/outward-borders-webfont.eot") format("embedded-opentype"),
+        url("../fonts/outward/outward-borders-webfont.otf") format("opentype"),
+        url("../fonts/outward/outward-borders-webfont.svg") format("svg"),
+        url("../fonts/outward/outward-borders.ttf") format("truetype");
+}
