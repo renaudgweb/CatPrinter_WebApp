@@ -156,7 +156,7 @@
         url("../fonts/Savate/savate-regular-webfont.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Sligoil";
+  font-family: "Sligoil-Micro.ttf";
   src: url("../fonts/Sligoil/Sligoil-Micro.woff") format("woff"),
         url("../fonts/Sligoil/Sligoil-Micro.woff2") format("woff2"),
         url("../fonts/Sligoil/Sligoil-Micro.otf") format("opentype"),
@@ -177,7 +177,7 @@
         url("../fonts/steps-mono/Steps-Mono.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Terminal-Grotesque";
+  font-family: "terminal-grotesque.ttf";
   src: url("../fonts/Terminal/terminal-grotesque-webfont.woff") format("woff"),
         url("../fonts/Terminal/terminal-grotesque-webfont.woff2") format("woff2"),
         url("../fonts/Terminal/terminal-grotesque-webfont.eot") format("embedded-opentype"),
