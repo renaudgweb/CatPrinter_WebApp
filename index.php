@@ -136,7 +136,7 @@ if(($_SERVER["REQUEST_METHOD"] == "POST")){
   <main>
 
     <section>
-      <textarea id="text" name="text" placeholder=" Write here..."></textarea>
+      <textarea id="text" name="text" placeholder="Write here..."></textarea>
       <button type="submit">send text</button>
     </section>
     </form>
