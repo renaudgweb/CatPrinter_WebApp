@@ -6,7 +6,7 @@ if (window.FileList && window.File && window.FileReader) {
     status.textContent = '';
     const file = event.target.files[0];
     if (!file.type) {
-      status.textContent = 'Error: The File.type property does not appear to be supported on this browser.';
+      status.textContent = 'Error: The File type property does not appear to be supported on this browser.';
       return;
     }
     if (!file.type.match('image.*')) {
@@ -47,6 +47,30 @@ $(document).ready(function() {
       })
       .done(function() {
         $('#status').html("<b>Printed !</b>");
+        setInterval(function() {
+          $('#status').html("Waiting...");
+        }, 15000);
+      })
+      .fail(function() {
+        alert("Posting failed.");
+      });
+    return false;
+  });
+});
+
+$(document).ready(function() {
+  $('#images').submit(function() {
+    $('#status').html("<b>Printing image...</b>");
+    $.ajax({
+        type: 'POST',
+        url: 'index.php',
+        data: $(this).serialize()
+      })
+      .done(function() {
+        $('#status').html("<b>Printed :)</b>");
+        setInterval(function() {
+          $('#status').html("Waiting...");
+        }, 15000);
       })
       .fail(function() {
         alert("Posting failed.");
