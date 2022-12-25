@@ -1,6 +1,6 @@
 body {
   background: #ccc;
-  font-family: "Terminal-Grotesque", monospace;
+  font-family: "terminal-grotesque.ttf", monospace;
   margin: 10px;
 }
 audio {
@@ -20,7 +20,7 @@ h1 {
   margin: 10px;
 }
 nav select {
-  font-family: "Sligoil", monospace;
+  font-family: "Sligoil-Micro.ttf", monospace;
   margin: 5px;
   width: 250px;
   height: 50px;
@@ -45,7 +45,7 @@ nav, main {
   min-height: 15vh;
 }
 button {
-  font-family: "Sligoil", monospace !important;
+  font-family: "Sligoil-Micro.ttf", monospace !important;
   background: #f0f !important;
   border-radius: 5px !important;
   padding: 10px 25px !important;
@@ -81,7 +81,7 @@ textarea {
   max-width: 560px;
 }
 .drag-area {
-  font-family: "Sligoil", monospace;
+  font-family: "Sligoil-Micro.ttf", monospace;
   background: #ddd;
   border: 2px dashed #f0f;
   height: 80%;
@@ -95,7 +95,7 @@ textarea {
   box-shadow: 4px 4px #000;
 }
 .drag-area input {
-  font-family: "Sligoil", monospace;
+  font-family: "Sligoil-Micro.ttf", monospace;
 }
 .status {
   border: 4px #ff0 dashed;
@@ -109,7 +109,7 @@ textarea {
 .status p {
   text-decoration: underline;
   text-decoration-color: #f0f;
-  font-family: "Sligoil", monospace;
+  font-family: "Sligoil-Micro.ttf", monospace;
   font-size: 20pt;
   word-wrap: break-word;
 }
