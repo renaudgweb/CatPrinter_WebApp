@@ -67,7 +67,8 @@ section {
   flex-direction: column;
 }
 textarea {
-  /* font-family: "Sligoil", monospace; */
+  font-family: "VG5000-Regular_web.ttf", monospace;
+  font-size: 28px;
   min-width: 60vw;
   min-height: 130px;
   border-radius: 5px;
