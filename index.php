@@ -143,13 +143,13 @@ if(($_SERVER["REQUEST_METHOD"] == "POST")){
 
     <section class="image">
       <div class="drag-area">
-        <form action="" method="post" enctype="multipart/form-data">
+        <form id="images" action="" method="post" enctype="multipart/form-data">
           <input type="file" name="image" id="file-selector" accept=".jpg, .jpeg, .png">
           <button type="submit" value="send">send image</button>
         </form>
       </div>
       <div class="status">
-        <p id="status"></p>
+        <p id="status">Waiting...</p>
       </div>
       <div class="img">
         <img id="output">
