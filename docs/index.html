@@ -1,0 +1,530 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#f0f" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#f0f" media="(prefers-color-scheme: dark)">
+  <link rel=icon href="https://raw.githubusercontent.com/renaudgweb/CatPrinter_WebApp/main/contents/favicon/favicon.png" sizes="16x16" type="image/png">
+  <link rel=icon href="https://raw.githubusercontent.com/renaudgweb/CatPrinter_WebApp/main/contents/favicon/favicon.ico" sizes="32x32 48x48" type="image/vnd.microsoft.icon">
+  <link rel=icon href="https://raw.githubusercontent.com/renaudgweb/CatPrinter_WebApp/main/contents/favicon/android-chrome-512x512.png" sizes="192x192 512x512">
+  <link rel=icon href="https://raw.githubusercontent.com/renaudgweb/CatPrinter_WebApp/main/contents/favicon/apple-touch-icon.png" sizes="180x180" type="image/png">
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <style>
+    @font-face {
+      font-family: "Lucida_Console_Regular.ttf";
+      src: url("fonts/lucida_console/Lucida-Console.woff") format("woff"),
+            url("fonts/lucida_console/Lucida-Console.svg") format("svg"),
+            url("fonts/lucida_console/Lucida-Console.eot") format("embedded-opentype"),
+            url("fonts/lucida_console/Lucida-Console.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "MajorMonoDisplay-Regular.ttf";
+      src: url("fonts/major-mono/MajorMonoDisplay-Regular.woff") format("woff"),
+            url("fonts/major-mono/MajorMonoDisplay-Regular.woff2") format("woff2"),
+            url("fonts/major-mono/MajorMonoDisplay-Regular.eot") format("embedded-opentype"),
+            url("fonts/major-mono/MajorMonoDisplay-Regular.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "VG5000-Regular_web.ttf";
+      src: url("fonts/vg5000/VG5000-Regular_web.woff") format("woff"),
+            url("fonts/vg5000/VG5000-Regular_web.woff2") format("woff2"),
+            url("fonts/vg5000/VG5000-Regular_web.eot") format("embedded-opentype"),
+            url("fonts/vg5000/VG5000-Regular.otf") format("opentype"),
+            url("fonts/vg5000/VG5000-Regular_web.svg") format("svg"),
+            url("fonts/vg5000/VG5000-Regular_web.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "ocr_b.ttf";
+      src: url("fonts/ocr_b/ocr_b.woff") format("woff"),
+            url("fonts/ocr_b/ocr_b.woff2") format("woff2"),
+            url("fonts/ocr_b/ocr_b.eot") format("embedded-opentype"),
+            url("fonts/ocr_b/ocr_b.svg") format("svg"),
+            url("fonts/ocr_b/ocr_b.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "Anthony.ttf";
+      src: url("fonts/anthony/Anthony.woff") format("woff"),
+            url("fonts/anthony/Anthony.woff2") format("woff2"),
+            url("fonts/anthony/Anthony.eot") format("embedded-opentype"),
+            url("fonts/anthony/Anthony.otf") format("opentype"),
+            url("fonts/anthony/Anthony.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "BilboINC.ttf";
+      src: url("fonts/BilboINC/BilboINC-Regular_web.woff") format("woff"),
+            url("fonts/BilboINC/BilboINC-Regular_web.woff2") format("woff2"),
+            url("fonts/BilboINC/BilboINC-Regular_web.eot") format("embedded-opentype"),
+            url("fonts/BilboINC/BilboINC-Regular_web.otf") format("opentype"),
+            url("fonts/BilboINC/BilboINC-Regular_web.svg") format("svg"),
+            url("fonts/BilboINC/BilboINC-Regular_web.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "CirrusCumulus.ttf";
+      src: url("fonts/cirruscumulus/CirrusCumulus.woff") format("woff"),
+            url("fonts/cirruscumulus/CirrusCumulus.otf") format("opentype"),
+            url("fonts/cirruscumulus/CirrusCumulus.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "Commune-Nuit_Debout_web.ttf";
+      src: url("fonts/Commune-Nuit-Debout/Commune-Nuit_Debout_web.woff") format("woff"),
+            url("fonts/Commune-Nuit-Debout/Commune-Nuit_Debout_web.woff2") format("woff2"),
+            url("fonts/Commune-Nuit-Debout/Commune-Nuit_Debout_web.eot") format("embedded-opentype"),
+            url("fonts/Commune-Nuit-Debout/Commune-Nuit_Debout_web.otf") format("opentype"),
+            url("fonts/Commune-Nuit-Debout/Commune-Nuit_Debout_web.svg") format("svg"),
+            url("fonts/Commune-Nuit-Debout/Commune-Nuit_Debout_web.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "FacadeGX.ttf";
+      src: url("fonts/Facade/Facade-Sud.woff") format("woff"),
+            url("fonts/Facade/Facade-Sud.otf") format("opentype"),
+            url("fonts/Facade/Facade-Sud.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "Format_1452.ttf";
+      src: url("fonts/format-1452/Format_1452.woff") format("woff"),
+            url("fonts/format-1452/Format_1452.woff2") format("woff2"),
+            url("fonts/format-1452/Format_1452.eot") format("embedded-opentype"),
+            url("fonts/format-1452/Format_1452.otf") format("opentype"),
+            url("fonts/format-1452/Format_1452.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "Gulax-Regular.ttf";
+      src: url("fonts/Gulax/Gulax-Regular.woff") format("woff"),
+            url("fonts/Gulax/Gulax-Regular.woff2") format("woff2"),
+            url("fonts/Gulax/Gulax-Regular.eot") format("embedded-opentype"),
+            url("fonts/Gulax/Gulax-Regular.otf") format("opentype"),
+            url("fonts/Gulax/Gulax-Regular.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "vtf_hngl-webfont.ttf";
+      src: url("fonts/Hangul/vtf_hngl-webfont.woff") format("woff"),
+            url("fonts/Hangul/vtf_hngl-webfont.eot") format("embedded-opentype"),
+            url("fonts/Hangul/hngl.otf") format("opentype"),
+            url("fonts/Hangul/vtf_hngl-webfont.svg") format("svg"),
+            url("fonts/Hangul/vtf_hngl-webfont.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "Mister-Pixel-Regular.ttf";
+      src: url("fonts/mr_pixel/Mister-Pixel-Regular.otf") format("opentype"),
+            url("fonts/mr_pixel/Mister-Pixel-Regular.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "le-murmure.ttf";
+      src: url("fonts/murmure/LeMurmure-Regular.woff") format("woff"),
+            url("fonts/murmure/LeMurmure-Regular.woff2") format("woff2"),
+            url("fonts/murmure/LeMurmure-Regular.eot") format("embedded-opentype"),
+            url("fonts/murmure/le-murmure.otf") format("opentype"),
+            url("fonts/murmure/le-murmure.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "Ouroboros-Regular.ttf";
+      src: url("fonts/ouroboros/Ouroboros-Regular.woff") format("woff"),
+            url("fonts/ouroboros/Ouroboros-Regular.woff2") format("woff2"),
+            url("fonts/ouroboros/Ouroboros-Regular.eot") format("embedded-opentype"),
+            url("fonts/ouroboros/Ouroboros-Regular.otf") format("opentype"),
+            url("fonts/ouroboros/Ouroboros-Regular.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "outward-block.ttf";
+      src: url("fonts/outward/outward-block-webfont.woff") format("woff"),
+            url("fonts/outward/outward-block-webfont.woff2") format("woff2"),
+            url("fonts/outward/outward-block-webfont.eot") format("embedded-opentype"),
+            url("fonts/outward/outward-block-webfont.otf") format("opentype"),
+            url("fonts/outward/outward-block-webfont.svg") format("svg"),
+            url("fonts/outward/outward-block.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "outward-borders.ttf";
+      src: url("fonts/outward/outward-borders-webfont.woff") format("woff"),
+            url("fonts/outward/outward-borders-webfont.woff2") format("woff2"),
+            url("fonts/outward/outward-borders-webfont.eot") format("embedded-opentype"),
+            url("fonts/outward/outward-borders-webfont.otf") format("opentype"),
+            url("fonts/outward/outward-borders-webfont.svg") format("svg"),
+            url("fonts/outward/outward-borders.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "PicNic-Regular.ttf";
+      src: url("fonts/PicNic/PicNic-Regular.woff") format("woff"),
+            url("fonts/PicNic/PicNic-Regular.woff2") format("woff2"),
+            url("fonts/PicNic/PicNic-Regular.eot") format("embedded-opentype"),
+            url("fonts/PicNic/PicNic-Regular.otf") format("opentype"),
+            url("fonts/PicNic/PicNic-Regular.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "Pilowlava-Regular.ttf";
+      src: url("fonts/pilowlava/Pilowlava-Regular.woff") format("woff"),
+            url("fonts/pilowlava/Pilowlava-Regular.woff2") format("woff2"),
+            url("fonts/pilowlava/Pilowlava-Regular.eot") format("embedded-opentype"),
+            url("fonts/pilowlava/Pilowlava-Regular.otf") format("opentype"),
+            url("fonts/pilowlava/Pilowlava-Regular.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "savate-regular-webfont.ttf";
+      src: url("fonts/Savate/savate-regular-webfont.woff") format("woff"),
+            url("fonts/Savate/savate-regular-webfont.woff2") format("woff2"),
+            url("fonts/Savate/savate-regular-webfont.eot") format("embedded-opentype"),
+            url("fonts/Savate/savate-regular.otf") format("opentype"),
+            url("fonts/Savate/savate-regular-webfont.svg") format("svg"),
+            url("fonts/Savate/savate-regular-webfont.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "Sligoil-Micro.ttf";
+      src: url("fonts/Sligoil/Sligoil-Micro.woff") format("woff"),
+            url("fonts/Sligoil/Sligoil-Micro.woff2") format("woff2"),
+            url("fonts/Sligoil/Sligoil-Micro.otf") format("opentype"),
+            url("fonts/Sligoil/Sligoil-Micro.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "Solide_Mirage-Mono_web.ttf";
+      src: url("fonts/Solide-Mirage/Solide_Mirage-Mono_web.woff") format("woff"),
+            url("fonts/Solide-Mirage/Solide_Mirage-Mono_web.woff2") format("woff2"),
+            url("fonts/Solide-Mirage/Solide_Mirage-Mono_web.eot") format("embedded-opentype"),
+            url("fonts/Solide-Mirage/SolideMirage-Mono.otf") format("opentype"),
+            url("fonts/Solide-Mirage/Solide_Mirage-Mono_web.svg") format("svg"),
+            url("fonts/Solide-Mirage/Solide_Mirage-Mono_web.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "Steps-Mono.ttf";
+      src: url("fonts/steps-mono/Steps-Mono.otf") format("opentype"),
+            url("fonts/steps-mono/Steps-Mono.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "terminal-grotesque.ttf";
+      src: url("fonts/Terminal/terminal-grotesque-webfont.woff") format("woff"),
+            url("fonts/Terminal/terminal-grotesque-webfont.woff2") format("woff2"),
+            url("fonts/Terminal/terminal-grotesque-webfont.eot") format("embedded-opentype"),
+            url("fonts/Terminal/terminal-grotesque-webfont.svg") format("svg"),
+            url("fonts/Terminal/terminal-grotesque-webfont.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "Trickster-Reg.ttf";
+      src: url("fonts/Trickster/Trickster-Reg.otf") format("opentype"),
+            url("fonts/Trickster/Trickster-Reg.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "Typefesse_Claire-Obscure.ttf";
+      src: url("fonts/typefesse/Typefesse_Claire-Obscure.woff") format("woff"),
+            url("fonts/typefesse/Typefesse_Claire-Obscure.woff2") format("woff2"),
+            url("fonts/typefesse/Typefesse_Claire-Obscure.eot") format("embedded-opentype"),
+            url("fonts/typefesse/Typefesse_Claire-Obscure.otf") format("opentype"),
+            url("fonts/typefesse/Typefesse_Claire-Obscure.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "Typefesse_Pleine.ttf";
+      src: url("fonts/typefesse/Typefesse_Pleine.woff") format("woff"),
+            url("fonts/typefesse/Typefesse_Pleine.woff2") format("woff2"),
+            url("fonts/typefesse/Typefesse_Pleine.eot") format("embedded-opentype"),
+            url("fonts/typefesse/Typefesse_Pleine.otf") format("opentype"),
+            url("fonts/typefesse/Typefesse_Pleine.ttf") format("truetype");
+    }
+
+    body {
+      background: #ccc;
+      font-family: "terminal-grotesque.ttf", monospace;
+      margin: 10px;
+    }
+    audio {
+      width: 50px;
+      border-radius: 5px;
+      background-color: #f0f;
+      box-shadow: 4px 4px #000;
+      border: 2px #ff0 dashed;
+      transition: 0.5s ease;
+    }
+    audio:hover {
+      box-shadow: 8px 8px #000;
+    }
+    h1 {
+      text-align: center;
+      font-size: 28pt;
+      margin: 10px;
+    }
+    nav select {
+      font-family: "Sligoil-Micro.ttf", monospace;
+      margin: 5px;
+      width: 250px;
+      height: 50px;
+      border-radius: 5px;
+      background-color: #f0f;
+      font-size: 20px;
+      font-weight: 500;
+      box-shadow: 4px 4px #000;
+      transition: 0.5s ease;
+      color: #000;
+    }
+    nav select:hover {
+      box-shadow: 8px 8px #000;
+      background-color: #ff0 !important;
+    }
+
+    nav, main {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: column;
+      min-height: 15vh;
+    }
+    button {
+      font-family: "Sligoil-Micro.ttf", monospace !important;
+      background: #f0f !important;
+      border-radius: 5px !important;
+      padding: 10px 25px !important;
+      font-size: 20px !important;
+      font-weight: 500 !important;
+      margin: 10px !important;
+      cursor: pointer;
+      box-shadow: 4px 4px #000;
+      transition: 0.5s ease;
+    }
+    button:hover {
+      box-shadow: 8px 8px #000;
+      background-color: #ff0 !important;
+      color: #000;
+    }
+    section {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    textarea {
+      font-family: "VG5000-Regular_web.ttf", monospace;
+      font-size: 28px;
+      min-width: 60vw;
+      min-height: 130px;
+      border-radius: 5px;
+      box-shadow: 4px 4px #000;
+      margin: 10px !important;
+      background-color: #ddd;
+      border: 2px dashed #f0f;
+    }
+    .img {
+      max-width: 560px;
+    }
+    .drag-area {
+      font-family: "Sligoil-Micro.ttf", monospace;
+      background: #ddd;
+      border: 2px dashed #f0f;
+      height: 80%;
+      width: 100%;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin: 10px;
+      box-shadow: 4px 4px #000;
+    }
+    .drag-area input {
+      font-family: "Sligoil-Micro.ttf", monospace;
+    }
+    .status {
+      border: 4px #ff0 dashed;
+      border-radius: 5px;
+      margin: 10px 40px;
+      padding: 0px 40px;
+      box-shadow: 4px 4px #000;
+      background-color: #ddd;
+      transition: 0.5s ease;
+    }
+    .status p {
+      text-decoration: underline;
+      text-decoration-color: #f0f;
+      font-family: "Sligoil-Micro.ttf", monospace;
+      font-size: 20pt;
+      word-wrap: break-word;
+    }
+    .status:hover {
+      box-shadow: 8px 8px #000;
+    }
+
+  </style>
+
+<title>Web Cat Printer</title>
+
+</head>
+<body>
+  <audio controls autoplay loop>
+    <source src="https://github.com/renaudgweb/CatPrinter_WebApp/blob/main/contents/sounds/Kirk_Osamayo-Shiba.mp3">
+  </audio>
+
+  <h1>Web Cat Printer (◉_◉)</h1>
+
+  <nav>
+    <form id="fonts" action="" method="post">
+      <select id="font-family" name="font_family">
+        <option value="Lucida_Console_Regular.ttf">Lucida Console</option>
+        <option value="MajorMonoDisplay-Regular.ttf">Major Mono Display</option>
+        <option value="VG5000-Regular_web.ttf" selected="yes">VG5000</option>
+        <option value="ocr_b.ttf">OCR-B</option>
+        <option value="Anthony.ttf">Anthony</option>
+        <option value="BilboINC.ttf">BilboINC</option>
+        <option value="CirrusCumulus.ttf">CirrusCumulus</option>
+        <option value="Commune-Nuit_Debout_web.ttf">Commune Nuit Debout</option>
+        <option value="FacadeGX.ttf">Facade</option>
+        <option value="Format_1452.ttf">Format1452</option>
+        <option value="Gulax-Regular.ttf">Gulax</option>
+        <option value="vtf_hngl-webfont.ttf">Hangul</option>
+        <option value="Mister-Pixel-Regular.ttf">Mister Pixel</option>
+        <option value="le-murmure.ttf">le murmure</option>
+        <option value="Ouroboros-Regular.ttf">Ouroboros</option>
+        <option value="outward-block.ttf">outward (block)</option>
+        <option value="outward-borders.ttf">outward (borders)</option>
+        <option value="PicNic-Regular.ttf">PicNic</option>
+        <option value="Pilowlava-Regular.ttf">Pilowlava</option>
+        <option value="savate-regular-webfont.ttf">savate</option>
+        <option value="Sligoil-Micro.ttf">Sligoil</option>
+        <option value="Solide_Mirage-Mono_web.ttf">Solide Mirage</option>
+        <option value="Steps-Mono.ttf">Steps</option>
+        <option value="terminal-grotesque.ttf">terminal grotesque</option>
+        <option value="Trickster-Reg.ttf">Trickster</option>
+        <option value="Typefesse_Claire-Obscure.ttf">Typefesse (Claire-Obscure)</option>
+        <option value="Typefesse_Pleine.ttf">Typefesse (Pleine)</option>
+      </select>
+
+      <select id="font-size" name="font_size">
+        <option value="6">6 pt</option>
+        <option value="7">7 pt</option>
+        <option value="8">8 pt</option>
+        <option value="9">9 pt</option>
+        <option value="10">10 pt</option>
+        <option value="11">11 pt</option>
+        <option value="12">12 pt</option>
+        <option value="13">13 pt</option>
+        <option value="14">14 pt</option>
+        <option value="15">15 pt</option>
+        <option value="16">16 pt</option>
+        <option value="18">18 pt</option>
+        <option value="20">20 pt</option>
+        <option value="21">21 pt</option>
+        <option value="22">22 pt</option>
+        <option value="24">24 pt</option>
+        <option value="26">26 pt</option>
+        <option value="28" selected="yes">28 pt</option>
+        <option value="30">30 pt</option>
+        <option value="32">32 pt</option>
+        <option value="34">34 pt</option>
+        <option value="36">36 pt</option>
+        <option value="40">40 pt</option>
+        <option value="42">42 pt</option>
+        <option value="44">44 pt</option>
+        <option value="48">48 pt</option>
+        <option value="54">54 pt</option>
+        <option value="60">60 pt</option>
+        <option value="66">66 pt</option>
+        <option value="72">72 pt</option>
+        <option value="80">80 pt</option>
+        <option value="88">88 pt</option>
+        <option value="96">96 pt</option>
+      </select>
+
+      <button type="submit" name="feed" value="feed">Feed paper</button>
+  </nav>
+  <main>
+
+    <section>
+      <textarea id="text" name="text" placeholder="Write here..."></textarea>
+      <button type="submit">send text</button>
+    </section>
+    </form>
+
+    <section class="image">
+      <div class="drag-area">
+        <form id="images" action="" method="post" enctype="multipart/form-data">
+          <input type="file" name="image" id="file-selector" accept=".jpg, .jpeg, .png">
+          <button type="submit" value="send">send image</button>
+        </form>
+      </div>
+      <div class="status">
+        <p id="status">Waiting...</p>
+      </div>
+      <div class="img">
+        <img id="output">
+      </div>
+    </section>
+
+  </main>
+</body>
+<script>
+  const status = document.getElementById('status');
+  const output = document.getElementById('output');
+  if (window.FileList && window.File && window.FileReader) {
+    document.getElementById('file-selector').addEventListener('change', event => {
+      output.src = '';
+      status.textContent = '';
+      const file = event.target.files[0];
+      if (!file.type) {
+        status.textContent = 'Error: The File type property does not appear to be supported on this browser.';
+        return;
+      }
+      if (!file.type.match('image.*')) {
+        status.textContent = 'Error: The selected file does not appear to be an image.'
+        return;
+      }
+      const reader = new FileReader();
+      reader.addEventListener('load', event => {
+        output.src = event.target.result;
+      });
+      reader.readAsDataURL(file);
+    });
+  }
+
+
+  $(document).ready(function() {
+    $('#font-family').change(function() {
+      var font_family = $(this).val();
+      $('#text').css('font-family', '"'+font_family+'"');
+    });
+  });
+
+  $(document).ready(function() {
+    $('#font-size').change(function() {
+      var font_size = $(this).val();
+      $('#text').css('fontSize', font_size+"px");
+    });
+  });
+
+
+  $(document).ready(function() {
+    $('#fonts').submit(function() {
+      $('#status').html("<b>Printing text...</b>");
+      $.ajax({
+          type: 'POST',
+          url: 'index.php',
+          data: $(this).serialize()
+        })
+        .done(function() {
+          $('#status').html("<b>Printed !</b>");
+          setInterval(function() {
+            $('#status').html("Waiting...");
+          }, 15000);
+        })
+        .fail(function() {
+          alert("Posting failed.");
+        });
+      return false;
+    });
+  });
+
+  $(document).ready(function() {
+    $('#images').submit(function() {
+      $('#status').html("<b>Printing image...</b>");
+      $.ajax({
+          type: 'POST',
+          url: 'index.php',
+          data: $(this).serialize()
+        })
+        .done(function() {
+          $('#status').html("<b>Printed :)</b>");
+          setInterval(function() {
+            $('#status').html("Waiting...");
+          }, 15000);
+        })
+        .fail(function() {
+          alert("Posting failed.");
+        });
+      return false;
+    });
+  });
+</script>
+</html>
