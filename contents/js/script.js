@@ -39,6 +39,27 @@ $(document).ready(function() {
 
 // Post Text & Images
 $(document).ready(function() {
+  $('#feed').submit(function() {
+    $('#status').html("<b>Feeding paper...</b>");
+    $.ajax({
+        type: 'POST',
+        url: 'index.php',
+        data: $(this).serialize()
+      })
+      .done(function() {
+        $('#status').html("<b>Feeded</b>");
+        setInterval(function() {
+          $('#status').html("Waiting...");
+        }, 5000);
+      })
+      .fail(function() {
+        alert("Posting failed.");
+      });
+    return false;
+  });
+});
+
+$(document).ready(function() {
   $('#fonts').submit(function() {
     $('#status').html("<b>Printing text...</b>");
     $.ajax({
