@@ -162,12 +162,12 @@ if(($_SERVER["REQUEST_METHOD"] == "POST")){
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script>
   let typed_1 = new Typed("#text", {
-    strings: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed \ndo eiusmod tempor incididunt ut labore et dolore magna aliqua.\nSem integer vitae justo eget magna fermentum iaculis eu."],
+    strings: ["Lorem ipsum dolor sit amet,", "consectetur adipiscing elit, sed \n", "do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n", "Sem integer vitae justo eget magna fermentum iaculis eu."],
     typeSpeed: 50,
-    backSpeed: 0,
+    backSpeed: 20,
     attr: 'placeholder',
     bindInputFocusEvents: true,
-    loop: false
+    loop: true
   })
 </script>
 </html>
