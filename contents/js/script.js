@@ -1,3 +1,4 @@
+// Drag & Drop
 const status = document.getElementById('status');
 const output = document.getElementById('output');
 if (window.FileList && window.File && window.FileReader) {
@@ -21,7 +22,7 @@ if (window.FileList && window.File && window.FileReader) {
   });
 }
 
-
+// Fonts & Size
 $(document).ready(function() {
   $('#font-family').change(function() {
     var font_family = $(this).val();
@@ -36,7 +37,7 @@ $(document).ready(function() {
   });
 });
 
-
+// Post Text & Images
 $(document).ready(function() {
   $('#fonts').submit(function() {
     $('#status').html("<b>Printing text...</b>");
