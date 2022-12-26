@@ -421,7 +421,7 @@
         <option value="96">96 pt</option>
       </select>
 
-      <button id="feed" type="submit" name="feed" value="feed">Feed paper</button>
+      <button type="submit" name="feed" value="feed">Feed paper</button>
   </nav>
   <main>
 
@@ -499,27 +499,6 @@
   });
 
  
-  $(document).ready(function() {
-    $('#feed').submit(function() {
-      $('#status').html("<b>Feeding paper...</b>");
-      $.ajax({
-          type: 'POST',
-          url: 'index.php',
-          data: $(this).serialize()
-        })
-        .done(function() {
-          $('#status').html("<b>Feeded</b>");
-          setInterval(function() {
-            $('#status').html("Waiting...");
-          }, 5000);
-        })
-        .fail(function() {
-          alert("Posting failed.");
-        });
-      return false;
-    });
-  });
-
   $(document).ready(function() {
     $('#fonts').submit(function() {
       $('#status').html("<b>Printing text...</b>");
