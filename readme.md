@@ -1,6 +1,6 @@
 # Webapp for CatPrinter
 
-[Demo](https://renaudgweb.github.io/CatPrinter_WebApp/index.html)
+[Demo](https://renaudgweb.github.io/CatPrinter_WebApp)
 
 ![Cat-Printer App screenshot](docs/screenshot.png)
 
