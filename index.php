@@ -9,7 +9,7 @@
 // curl --location --request POST --form 'feed="100"' 'localhost:5000'
 
 if(($_SERVER["REQUEST_METHOD"] == "POST")){
-  if (empty(isset($_POST['text'])) && isset($_POST['font_family']) && isset($_POST['font_size'])){
+  if (isset($_POST['text']) && isset($_POST['font_family']) && isset($_POST['font_size'])){
     $font_family = htmlspecialchars($_POST['font_family']);
     $font_size = htmlspecialchars($_POST['font_size']);
     $user_text = htmlspecialchars($_POST['text']);
@@ -33,7 +33,7 @@ if(($_SERVER["REQUEST_METHOD"] == "POST")){
   } elseif (isset($_POST['feed'])){
       shell_exec("curl --location --request POST --form 'feed=\"100\"' 'localhost:5000'");
   } else {
-      echo "<p class='text-2xl text-center' style='background-color:yellow;text-align:center;font-size:20px'>Error: the text-area or image is empty :(</p>";
+      echo "<p>Error: the text-area or image is empty :(</p>";
   }
 }
 ?>
@@ -131,14 +131,17 @@ if(($_SERVER["REQUEST_METHOD"] == "POST")){
         <option value="96">96 pt</option>
       </select>
 
-      <button type="submit" name="feed" value="feed">Feed paper</button>
   </nav>
   <main>
 
     <section>
-      <textarea id="text" name="text"></textarea>
+      <textarea id="text-area" name="text"></textarea>
       <button type="submit">send text</button>
     </section>
+    </form>
+
+    <form id="paper" class="" action="" method="post">
+      <button id="feed-paper" type="submit" name="feed" value="feed">Feed paper</button>
     </form>
 
     <section class="image">
@@ -161,7 +164,7 @@ if(($_SERVER["REQUEST_METHOD"] == "POST")){
 <script src="contents/js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script>
-  let typed_1 = new Typed("#text", {
+  let typed_1 = new Typed("#text-area", {
     strings: ["Lorem ipsum dolor sit amet,", "consectetur adipiscing elit, sed \n", "do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n", "Sem integer vitae justo eget magna fermentum iaculis eu."],
     typeSpeed: 50,
     backSpeed: 20,
