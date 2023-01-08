@@ -53,7 +53,7 @@ if(($_SERVER["REQUEST_METHOD"] == "POST")){
   <link rel="stylesheet" href="contents/css/style.css">
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 
-<title>Web Cat Printer</title>
+<title>Web Cat Printer (◉_◉)</title>
 
 </head>
 <body>
