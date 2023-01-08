@@ -43,8 +43,8 @@ if(($_SERVER["REQUEST_METHOD"] == "POST")){
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="theme-color" content="#f0f" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#f0f" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffa9c7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#ffa9c7" media="(prefers-color-scheme: dark)">
   <link rel=icon href=contents/favicon/favicon.png sizes="16x16" type="image/png">
   <link rel=icon href=contents/favicon/favicon.ico sizes="32x32 48x48" type="image/vnd.microsoft.icon">
   <link rel=icon href=contents/favicon/android-chrome-512x512.png sizes="192x192 512x512">
@@ -136,23 +136,23 @@ if(($_SERVER["REQUEST_METHOD"] == "POST")){
 
     <section>
       <textarea id="text-area" name="text"></textarea>
-      <button type="submit">send text</button>
+      <button type="submit">print text</button>
     </section>
     </form>
 
-    <form id="paper" class="" action="" method="post">
+    <!-- <form id="paper" class="" action="" method="post">
       <button id="feed-paper" type="submit" name="feed" value="feed">Feed paper</button>
-    </form>
+    </form> -->
 
     <section class="image">
       <div class="drag-area">
         <form id="images" action="" method="post" enctype="multipart/form-data">
           <input type="file" name="image" id="file-selector" accept=".jpg, .jpeg, .png">
-          <button type="submit" value="send">send image</button>
+          <button type="submit" value="send">print image</button>
         </form>
       </div>
       <div class="status">
-        <p id="status">Waiting...</p>
+        <p id="status">Waiting ⏳️</p>
       </div>
       <div class="img">
         <img id="output">
