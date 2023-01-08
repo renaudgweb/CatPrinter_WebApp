@@ -2,7 +2,7 @@
 
 [Demo](https://renaudgweb.github.io/CatPrinter_WebApp)
 
-![Cat-Printer App screenshot](docs/screenshot.png)
+![Cat-Printer App screenshot](docs/screenshot-app.png)
 
 ## what it should do:
 
