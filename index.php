@@ -135,7 +135,7 @@ if(($_SERVER["REQUEST_METHOD"] == "POST")){
   </nav>
   <main>
 
-    <div id="particles-js" class="particles"></div>
+    <!-- <div id="particles-js" class="particles"></div> -->
 
     <section>
       <textarea id="text-area" name="text"></textarea>
