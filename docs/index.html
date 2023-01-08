@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="theme-color" content="#f0f" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#f0f" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="##ffa9c7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="##ffa9c7" media="(prefers-color-scheme: dark)">
   <link rel=icon href="https://raw.githubusercontent.com/renaudgweb/CatPrinter_WebApp/main/contents/favicon/favicon.png" sizes="16x16" type="image/png">
   <link rel=icon href="https://raw.githubusercontent.com/renaudgweb/CatPrinter_WebApp/main/contents/favicon/favicon.ico" sizes="32x32 48x48" type="image/vnd.microsoft.icon">
   <link rel=icon href="https://raw.githubusercontent.com/renaudgweb/CatPrinter_WebApp/main/contents/favicon/android-chrome-512x512.png" sizes="192x192 512x512">
@@ -220,7 +220,7 @@
     }
 
     body {
-      background: #ccc;
+      background: #ffa9c7;
       font-family: "terminal-grotesque.ttf", monospace;
       margin: 10px;
     }
@@ -228,12 +228,12 @@
       width: 50px;
       border-radius: 5px;
       background-color: #f0f;
-      box-shadow: 4px 4px #000;
-      border: 2px #ff0 dashed;
+      box-shadow: 4px 4px #aad7fa;
+      border: 2px #fafc66 dashed;
       transition: 0.5s ease;
     }
     audio:hover {
-      box-shadow: 8px 8px #000;
+      box-shadow: 8px 8px #aad7fa;
     }
     h1 {
       text-align: center;
@@ -245,17 +245,17 @@
       margin: 5px;
       width: 250px;
       height: 50px;
-      border-radius: 5px;
-      background-color: #f0f;
+      border-radius: 100px;
+      background-color: #ddd;
       font-size: 20px;
       font-weight: 500;
-      box-shadow: 4px 4px #000;
+      box-shadow: 4px 4px #aad7fa;
       transition: 0.5s ease;
       color: #000;
     }
     nav select:hover {
-      box-shadow: 8px 8px #000;
-      background-color: #ff0 !important;
+      box-shadow: 8px 8px #aad7fa;
+      background-color: #fafc66 !important;
     }
 
     nav, main {
@@ -267,19 +267,20 @@
     }
     button {
       font-family: "Sligoil-Micro.ttf", monospace !important;
-      background: #f0f !important;
-      border-radius: 5px !important;
+      background: #ddd !important;
+      border-radius: 100px !important;
       padding: 10px 25px !important;
       font-size: 20px !important;
       font-weight: 500 !important;
       margin: 10px !important;
       cursor: pointer;
-      box-shadow: 4px 4px #000;
+      box-shadow: 4px 4px #aad7fa;
       transition: 0.5s ease;
+      color: #000;
     }
     button:hover {
-      box-shadow: 8px 8px #000;
-      background-color: #ff0 !important;
+      box-shadow: 8px 8px #aad7fa;
+      background-color: #fafc66 !important;
       color: #000;
     }
     section {
@@ -292,10 +293,10 @@
       font-size: 28px;
       min-width: 60vw;
       min-height: 130px;
-      border-radius: 5px;
-      box-shadow: 4px 4px #000;
+      border-radius: 25px;
+      box-shadow: 4px 4px #aad7fa;
       margin: 10px !important;
-      background-color: #ddd;
+      background-color: #fafc66;
       border: 2px dashed #f0f;
     }
     .img {
@@ -303,27 +304,27 @@
     }
     .drag-area {
       font-family: "Sligoil-Micro.ttf", monospace;
-      background: #ddd;
+      background: #fafc66;
       border: 2px dashed #f0f;
       height: 80%;
       width: 100%;
-      border-radius: 5px;
+      border-radius: 25px;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
       margin: 10px;
-      box-shadow: 4px 4px #000;
+      box-shadow: 4px 4px #aad7fa;
     }
     .drag-area input {
       font-family: "Sligoil-Micro.ttf", monospace;
     }
     .status {
-      border: 4px #ff0 dashed;
-      border-radius: 5px;
+      border: 4px #fafc66 dashed;
+      border-radius: 100px;
       margin: 10px 40px;
       padding: 0px 40px;
-      box-shadow: 4px 4px #000;
+      box-shadow: 4px 4px #aad7fa;
       background-color: #ddd;
       transition: 0.5s ease;
     }
@@ -335,10 +336,20 @@
       word-wrap: break-word;
     }
     .status:hover {
-      box-shadow: 8px 8px #000;
+      box-shadow: 8px 8px #aad7fa;
     }
     span {
       display: none;
+    }
+
+
+    @media (max-width: 450px) {
+      textarea, .drag-area {
+        width: 95%;
+      }
+      audio {
+        display: none;
+      }
     }
 
   </style>
@@ -426,23 +437,23 @@
 
     <section>
       <textarea id="text-area" name="text"></textarea>
-      <button type="submit">send text</button>
+      <button type="submit">print text</button>
     </section>
     </form>
 
-    <form id="paper" class="" action="" method="post">
+    <!-- <form id="paper" class="" action="" method="post">
       <button id="feed-paper" type="submit" name="feed" value="feed">Feed paper</button>
-    </form>
+    </form> -->
 
     <section class="image">
       <div class="drag-area">
         <form id="images" action="" method="post" enctype="multipart/form-data">
           <input type="file" name="image" id="file-selector" accept=".jpg, .jpeg, .png">
-          <button type="submit" value="send">send image</button>
+          <button type="submit" value="send">print image</button>
         </form>
       </div>
       <div class="status">
-        <p id="status">Waiting...</p>
+        <p id="status">Waiting ⏳️</p>
       </div>
       <div class="img">
         <img id="output">
@@ -463,85 +474,125 @@
   })
 </script>
 <script>
-  const status = document.getElementById('status');
-  const output = document.getElementById('output');
-  if (window.FileList && window.File && window.FileReader) {
-    document.getElementById('file-selector').addEventListener('change', event => {
-      output.src = '';
-      status.textContent = '';
-      const file = event.target.files[0];
-      if (!file.type) {
-        status.textContent = 'Error: The File type property does not appear to be supported on this browser.';
-        return;
-      }
-      if (!file.type.match('image.*')) {
-        status.textContent = 'Error: The selected file does not appear to be an image.'
-        return;
-      }
-      const reader = new FileReader();
-      reader.addEventListener('load', event => {
-        output.src = event.target.result;
-      });
-      reader.readAsDataURL(file);
+// Drag & Drop
+const status = document.getElementById('status');
+const output = document.getElementById('output');
+if (window.FileList && window.File && window.FileReader) {
+  document.getElementById('file-selector').addEventListener('change', event => {
+    output.src = '';
+    status.textContent = '';
+    const file = event.target.files[0];
+    if (!file.type) {
+      status.textContent = 'Error: The File type property does not appear to be supported on this browser.';
+      return;
+    }
+    if (!file.type.match('image.*')) {
+      status.textContent = 'Error: The selected file does not appear to be an image.'
+      return;
+    }
+    const reader = new FileReader();
+    reader.addEventListener('load', event => {
+      output.src = event.target.result;
     });
+    reader.readAsDataURL(file);
+  });
+}
+
+
+// Background colors
+var $button = $('#status');
+var originalColorBackground = $('body').css('background-color');
+var colorChanged = false;
+
+$button.click(function() {
+  if (colorChanged) {
+    $('body').css('background-color', originalColorBackground);
+    colorChanged = false;
+  } else {
+    $('body').css('background-color', '#006cf5');
+    colorChanged = true;
   }
+});
 
 
-  $(document).ready(function() {
-    $('#font-family').change(function() {
-      var font_family = $(this).val();
-      $('#text-area').css('font-family', '"'+font_family+'"');
-    });
+// Fonts & Size
+$(document).ready(function() {
+  $('#font-family').change(function() {
+    var font_family = $(this).val();
+    $('#text-area').css('font-family', '"'+font_family+'"');
   });
+});
 
-  $(document).ready(function() {
-    $('#font-size').change(function() {
-      var font_size = $(this).val();
-      $('#text-area').css('fontSize', font_size+"px");
-    });
+$(document).ready(function() {
+  $('#font-size').change(function() {
+    var font_size = $(this).val();
+    $('#text-area').css('fontSize', font_size+"px");
   });
+});
 
- 
-  $(document).ready(function() {
-    $('#fonts').submit(function() {
-      $('#status').html("<b>Printing text...</b>");
-      $.ajax({
-          type: 'POST',
-          url: 'index.php',
-          data: $(this).serialize()
-        })
-        .done(function() {
-          $('#status').html("<b>Printed !</b>");
-          setInterval(function() {
-            $('#status').html("Waiting...");
-          }, 15000);
-        })
-        .fail(function() {
-          alert("Posting failed.");
-        });
-      return false;
-    });
-  });
 
-  $(document).ready(function() {
-    $('#images').submit(function() {
-      $('#status').html("<b>Printing image...</b>");
-      $.ajax({
-          type: 'POST',
-          url: 'index.php',
-          data: $(this).serialize()
-        })
-        .done(function() {
-          $('#status').html("<b>Printed :)</b>");
-          setInterval(function() {
-            $('#status').html("Waiting...");
-          }, 15000);
-        })
-        .fail(function() {
-          alert("Posting failed.");
-        });
-      return false;
-    });
+// Post Text & Images
+// $(document).ready(function() {
+//   $('#paper').submit(function() {
+//     $('#status').html("<b>Feeding 🧻️</b>");
+//     $.ajax({
+//         type: 'POST',
+//         url: 'index.php',
+//         data: $(this).serialize()
+//       })
+//       .done(function() {
+//         $('#status').html("<b>Feeded 🧻️</b>");
+//         setInterval(function() {
+//           $('#status').html("Waiting ⏳️");
+//         }, 5000);
+//       })
+//       .fail(function() {
+//         alert("Posting failed.");
+//       });
+//     return false;
+//   });
+// });
+
+$(document).ready(function() {
+  $('#fonts').submit(function() {
+    $('#status').html("<b>Printing 💬️</b>");
+    $.ajax({
+        type: 'POST',
+        url: 'index.php',
+        data: $(this).serialize()
+      })
+      .done(function() {
+        $('#status').html("<b>Printed 🖨️</b>");
+        setInterval(function() {
+          $('#status').html("Waiting ⏳️");
+        }, 15000);
+      })
+      .fail(function() {
+        alert("Posting failed.");
+      });
+    return false;
   });
+});
+
+$(document).ready(function() {
+  $('#images').submit(function() {
+    $('#status').html("<b>Printing 🖼️</b>");
+    $.ajax({
+        type: 'POST',
+        url: 'index.php',
+        data: $(this).serialize()
+      })
+      .done(function() {
+        $('#status').html("<b>Printed 🖨️</b>");
+        setInterval(function() {
+          $('#status').html("Waiting ⏳️");
+        }, 15000);
+      })
+      .fail(function() {
+        alert("Posting failed.");
+      });
+    return false;
+  });
+});
 </script>
 </html>
