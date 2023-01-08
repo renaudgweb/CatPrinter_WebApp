@@ -51,6 +51,7 @@ if(($_SERVER["REQUEST_METHOD"] == "POST")){
   <link rel=icon href=contents/favicon/apple-touch-icon.png sizes="180x180" type="image/png">
   <link rel="stylesheet" href="contents/css/font-face.css">
   <link rel="stylesheet" href="contents/css/style.css">
+  <script src="contents/js/particles.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 
 <title>Web Cat Printer (◉_◉)</title>
@@ -134,6 +135,8 @@ if(($_SERVER["REQUEST_METHOD"] == "POST")){
   </nav>
   <main>
 
+    <div id="particles-js" class="particles"></div>
+
     <section>
       <textarea id="text-area" name="text"></textarea>
       <button type="submit">print text</button>
@@ -161,6 +164,7 @@ if(($_SERVER["REQUEST_METHOD"] == "POST")){
 
   </main>
 </body>
+<script src="contents/js/app.js"></script>
 <script src="contents/js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script>
