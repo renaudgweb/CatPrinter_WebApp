@@ -22,6 +22,23 @@ if (window.FileList && window.File && window.FileReader) {
   });
 }
 
+
+// Background colors
+var $button = $('#status');
+var originalColorBackground = $('body').css('background-color');
+var colorChanged = false;
+
+$button.click(function() {
+  if (colorChanged) {
+    $('body').css('background-color', originalColorBackground);
+    colorChanged = false;
+  } else {
+    $('body').css('background-color', '#006cf5');
+    colorChanged = true;
+  }
+});
+
+
 // Fonts & Size
 $(document).ready(function() {
   $('#font-family').change(function() {
@@ -37,40 +54,41 @@ $(document).ready(function() {
   });
 });
 
+
 // Post Text & Images
-$(document).ready(function() {
-  $('#paper').submit(function() {
-    $('#status').html("<b>Feeding paper...</b>");
-    $.ajax({
-        type: 'POST',
-        url: 'index.php',
-        data: $(this).serialize()
-      })
-      .done(function() {
-        $('#status').html("<b>Feeded !</b>");
-        setInterval(function() {
-          $('#status').html("Waiting...");
-        }, 5000);
-      })
-      .fail(function() {
-        alert("Posting failed.");
-      });
-    return false;
-  });
-});
+// $(document).ready(function() {
+//   $('#paper').submit(function() {
+//     $('#status').html("<b>Feeding 🧻️</b>");
+//     $.ajax({
+//         type: 'POST',
+//         url: 'index.php',
+//         data: $(this).serialize()
+//       })
+//       .done(function() {
+//         $('#status').html("<b>Feeded 🧻️</b>");
+//         setInterval(function() {
+//           $('#status').html("Waiting ⏳️");
+//         }, 5000);
+//       })
+//       .fail(function() {
+//         alert("Posting failed.");
+//       });
+//     return false;
+//   });
+// });
 
 $(document).ready(function() {
   $('#fonts').submit(function() {
-    $('#status').html("<b>Printing text...</b>");
+    $('#status').html("<b>Printing 💬️</b>");
     $.ajax({
         type: 'POST',
         url: 'index.php',
         data: $(this).serialize()
       })
       .done(function() {
-        $('#status').html("<b>Printed !</b>");
+        $('#status').html("<b>Printed 🖨️</b>");
         setInterval(function() {
-          $('#status').html("Waiting...");
+          $('#status').html("Waiting ⏳️");
         }, 15000);
       })
       .fail(function() {
@@ -82,16 +100,16 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   $('#images').submit(function() {
-    $('#status').html("<b>Printing image...</b>");
+    $('#status').html("<b>Printing 🖼️</b>");
     $.ajax({
         type: 'POST',
         url: 'index.php',
         data: $(this).serialize()
       })
       .done(function() {
-        $('#status').html("<b>Printed :)</b>");
+        $('#status').html("<b>Printed 🖨️</b>");
         setInterval(function() {
-          $('#status').html("Waiting...");
+          $('#status').html("Waiting ⏳️");
         }, 15000);
       })
       .fail(function() {
