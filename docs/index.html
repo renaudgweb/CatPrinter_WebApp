@@ -490,14 +490,14 @@
   $(document).ready(function() {
     $('#font-family').change(function() {
       var font_family = $(this).val();
-      $('#text').css('font-family', '"'+font_family+'"');
+      $('#text-area').css('font-family', '"'+font_family+'"');
     });
   });
 
   $(document).ready(function() {
     $('#font-size').change(function() {
       var font_size = $(this).val();
-      $('#text').css('fontSize', font_size+"px");
+      $('#text-area').css('fontSize', font_size+"px");
     });
   });
 
