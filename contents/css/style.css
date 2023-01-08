@@ -3,6 +3,8 @@ body {
   font-family: "terminal-grotesque.ttf", monospace;
   margin: 10px;
 }
+.particles{
+}
 audio {
   width: 50px;
   border-radius: 5px;
@@ -127,6 +129,9 @@ span {
     width: 95%;
   }
   audio {
+    display: none;
+  }
+  .particles{
     display: none;
   }
 }
