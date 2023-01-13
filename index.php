@@ -58,6 +58,9 @@ if(($_SERVER["REQUEST_METHOD"] == "POST")){
 
 </head>
 <body>
+
+  <div id="particles-js" class="particles"></div>
+
   <audio controls autoplay loop>
     <source src="contents/sounds/Kirk_Osamayo-Shiba.mp3">
   </audio>
@@ -134,8 +137,6 @@ if(($_SERVER["REQUEST_METHOD"] == "POST")){
 
   </nav>
   <main>
-
-    <!-- <div id="particles-js" class="particles"></div> -->
 
     <section>
       <textarea id="text-area" name="text"></textarea>
