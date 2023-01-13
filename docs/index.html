@@ -258,7 +258,12 @@
       box-shadow: 8px 8px #aad7fa;
       background-color: #fafc66 !important;
     }
-
+    .particles {
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+    }
     nav, main {
       display: flex;
       align-items: center;
@@ -362,6 +367,9 @@
 
 </head>
 <body>
+
+  <div id="particles-js" class="particles"></div>
+
   <audio controls autoplay loop>
     <source src="sounds/Kirk_Osamayo-Shiba.mp3">
   </audio>
@@ -438,8 +446,6 @@
 
   </nav>
   <main>
-    
-    <!-- <div id="particles-js" class="particles"></div> -->
 
     <section>
       <textarea id="text-area" name="text"></textarea>
@@ -673,7 +679,7 @@ particlesJS('particles-js',
       },
       "move": {
         "enable": true,
-        "speed": 6,
+        "speed": 3,
         "direction": "none",
         "random": false,
         "straight": false,
