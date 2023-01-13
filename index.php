@@ -14,7 +14,7 @@ if(($_SERVER["REQUEST_METHOD"] == "POST")){
     $font_size = htmlspecialchars($_POST['font_size']);
     $user_text = htmlspecialchars($_POST['text']);
     shell_exec("curl --location -X POST --form 'font=".$font_family."' --form 'size=".$font_size."' --form 'text=".$user_text."' --form 'feed=\"100\"' 'localhost:5000'");
-  } elseif (empty(isset($_FILES['image']))){
+  } elseif (isset($_FILES['image'])){
       $errors = array();
       $file_name = $_FILES['image']['name'];
       $file_size = $_FILES['image']['size'];
