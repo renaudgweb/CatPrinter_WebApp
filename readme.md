@@ -6,8 +6,7 @@
 
 ## what it should do:
 
-- define the font family
-- define the font size
-- a button to feed paper
-- text area for sending text
-- image drag & drop zone
+- define and show the font family ✅️
+- define and show the font size ✅️
+- text area for sending text ✅️
+- image drag & drop zone ✅️
