@@ -82,6 +82,7 @@ if(($_SERVER["REQUEST_METHOD"] == "POST")){
         <option value="MajorMonoDisplay-Regular.ttf">Major Mono Display</option>
         <option value="VG5000-Regular_web.ttf" selected="yes">VG5000</option>
         <option value="ocr_b.ttf">OCR-B</option>
+        <option value="Peignot.ttf">Peignot</option>
         <option value="Anthony.ttf">Anthony</option>
         <option value="BilboINC.ttf">BilboINC</option>
         <option value="CirrusCumulus.ttf">CirrusCumulus</option>
