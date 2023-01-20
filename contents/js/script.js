@@ -77,26 +77,26 @@ $(document).ready(function() {
 //   });
 // });
 
-// $(document).ready(function() {
-//   $('#fonts').submit(function() {
-//     $('#status').html("<b>Printing 💬️</b>");
-//     $.ajax({
-//         type: 'POST',
-//         url: 'index.php',
-//         data: $(this).serialize()
-//       })
-//       .done(function() {
-//         $('#status').html("<b>Printed 🖨️</b>");
-//         setInterval(function() {
-//           $('#status').html("Waiting ⏳️");
-//         }, 15000);
-//       })
-//       .fail(function() {
-//         alert("Posting failed.");
-//       });
-//     return false;
-//   });
-// });
+$(document).ready(function() {
+  $('#fonts').submit(function() {
+    $('#status').html("<b>Printing 💬️</b>");
+    $.ajax({
+        type: 'POST',
+        url: 'index.php',
+        data: $(this).serialize()
+      })
+      .done(function() {
+        $('#status').html("<b>Printed 🖨️</b>");
+        setInterval(function() {
+          $('#status').html("Waiting ⏳️");
+        }, 15000);
+      })
+      .fail(function() {
+        alert("Posting failed.");
+      });
+    return false;
+  });
+});
 
 // $(document).ready(function() {
 //   $('#images').submit(function() {
