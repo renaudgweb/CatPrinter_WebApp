@@ -12,7 +12,8 @@ if(($_SERVER["REQUEST_METHOD"] == "POST")){
   if (isset($_POST['text']) && isset($_POST['font_family']) && isset($_POST['font_size'])){
     $font_family = htmlspecialchars($_POST['font_family']);
     $font_size = htmlspecialchars($_POST['font_size']);
-    $user_text = htmlspecialchars($_POST['text']);
+    $user_string = htmlspecialchars($_POST['text']);
+    $user_text = str_replace(';', ',', $user_string);
 
     $file_w = fopen('contents/txt/user_text.txt', 'w');
     fwrite($file_w, $user_text);
