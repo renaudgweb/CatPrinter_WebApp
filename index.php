@@ -20,7 +20,8 @@ if(($_SERVER["REQUEST_METHOD"] == "POST")){
     $file_r = fopen('contents/txt/user_text.txt', 'r');
     $file_contents = fread($file_r, filesize('contents/txt/user_text.txt'));
     shell_exec("curl --location -X POST --form 'font=".$font_family."' --form 'size=".$font_size."' --form 'text=".$file_contents."' --form 'feed=\"100\"' 'localhost:5000'");
-    fclose($file_w, $file_r);
+    fclose($file_w);
+    fclose($file_r);
   } elseif (isset($_FILES['image'])){
       $errors = array();
       $file_name = $_FILES['image']['name'];
