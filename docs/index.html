@@ -523,9 +523,9 @@ if (window.FileList && window.File && window.FileReader) {
 
 
 // Background colors
-var $button = $('#status');
-var originalColorBackground = $('body').css('background-color');
-var colorChanged = false;
+let $button = $('#status');
+let originalColorBackground = $('body').css('background-color');
+let colorChanged = false;
 
 $button.click(function() {
   if (colorChanged) {
@@ -541,14 +541,14 @@ $button.click(function() {
 // Fonts & Size
 $(document).ready(function() {
   $('#font-family').change(function() {
-    var font_family = $(this).val();
+    let font_family = $(this).val();
     $('#text-area').css('font-family', '"'+font_family+'"');
   });
 });
 
 $(document).ready(function() {
   $('#font-size').change(function() {
-    var font_size = $(this).val();
+    let font_size = $(this).val();
     $('#text-area').css('fontSize', font_size+"px");
   });
 });
